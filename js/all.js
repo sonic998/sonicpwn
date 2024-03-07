@@ -217,22 +217,6 @@ function str2ab(a) {
 }, str2ab(window.location.hash)).then(function(a) {
     if ("9e04130fa02fc3c416f28ba556f0165da4d93054" != hexlify(new Uint8Array(a))) throw null;
 }).catch(function() {
-    document.title = "Incompatible version";
-    for (var a = document.body; a.firstChild;) a.removeChild(a.firstChild);
-    var d = document.createElement("div");
-    d.className = "center";
-    d.appendChild(document.createElement("h1")).textContent = "Unsupported (i)OS!";
-    d.appendChild(document.createElement("h2")).textContent = "This jailbreakme is only compatible with iOS 10. You're not on that version, so please don't use it";
-    a.appendChild(d);
-    a.className = "incompatible";
-    window.ontouchmove = void 0;
-    window.ontouchend = void 0;
-    window.onmousemove = void 0;
-    window.onmouseup = void 0;
-    window.ontouchstart = function(a) {
-        a.preventDefault();
-        return !1
-    }
 });
 window.addEventListener("load", function() {
     var a = function() {
